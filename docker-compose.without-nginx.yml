@@ -4,3 +4,13 @@ services:
   mattermost:
     ports:
       - ${APP_PORT}:8065
+  ngrok:
+    image: wernight/ngrok
+    ports:
+      - 4040:4040
+    environment:
+      NGROK_PROTOCOL: http
+      NGROK_PORT: mattermost:8065
+      NGROK_AUTH: 2AIkuvAwfKqPbMvOQwuXFLOpPjn_76LE8wRRpk9yjKanzwn89
+    depends_on:
+      - mattermost
