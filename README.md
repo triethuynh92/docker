@@ -31,13 +31,19 @@ At a minimum, you must edit the `DOMAIN` value in the `.env` file to correspond 
     docker-compose -f docker-compose.yml -f docker-compose.without-nginx.yml up -d
 
 - To access your new Mattermost deployment on local machine, navigate to `http://localhost:8065`
+
 <img src="image/localhost_mastermost.png">
+
 - To get URL access from Internet, navigate to `http://localhost:4040/inspect/http`
+
 <img src="image/ngrok.png">
 <img src="image/ngrok_https.png">
+
 - To access `Admin Console Page`, navigate to `http://localhost:8065/admin_console/` or `https://xxx.ngrok.io/admin_console/`
+
 <img src="image/admin_console.png">
 <img src="image/admin_console_https.png">
+
 - To shut down your deployment 
     ```
     docker-compose -f docker-compose.yml -f docker-compose.without-nginx.yml down
